@@ -23,5 +23,8 @@ FRAMEWORK_LINEAGE_API_NEEDS_UPDATE_TEXT := $(TOPDIR)vendor/lineage/build/core/ap
 # Rules for common targets
 include $(TOPDIR)vendor/lineage/build/core/common_target.mk
 
+# Rules for AW targets
+include $(TOPDIR)vendor/lineage/build/core/aw_target.mk
+
 # Rules for QCOM targets
 include $(TOPDIR)vendor/lineage/build/core/qcom_target.mk

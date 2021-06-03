@@ -1,0 +1,15 @@
+# Platform names
+CERES := ceres #AW100
+
+SUN50I_FAMILY := $(CERES)
+
+ifneq ($(filter $(SUN50I_FAMILY),$(TARGET_BOARD_PLATFORM)),)
+    AW_HARDWARE_VARIANT := sun50i
+else
+    AW_HARDWARE_VARIANT := $(TARGET_BOARD_PLATFORM)
+endif
+
+# Allow a device to opt-out hardset of PRODUCT_SOONG_NAMESPACES
+#AW_SOONG_NAMESPACE ?= hardware/aw/$(AW_HARDWARE_VARIANT)
+AW_SOONG_NAMESPACE ?= hardware/aw
+PRODUCT_SOONG_NAMESPACES += $(AW_SOONG_NAMESPACE)
